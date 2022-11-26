@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar CSS */
+nav{
+    background-color: burlywood;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    font-size: 20px;
+    font-family: 'Rubik Iso', cursive;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: .5s all;
+}
+
+/* Game Container CSS */
+.gameContainer{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    margin-top:50px ;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns:repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box:hover{
+    cursor: pointer;
+    background-color: rgb(248, 248, 160);
+}
+
+.info{
+    font-size: 22px;
+}
+
+.gameInfo{
+    padding: 0 35px;
+    font-family: 'Baloo bhaina 2', cursive;
+}
+
+.gameInfo{
+    font-size: 1.5rem;
+}
+
+.imgbox img{
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 0 23px;
+    padding: 5px 15px;
+    background-color: yellow;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 950px) 
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+
+    .gameInfo{
+        margin-top: 34px;
+    }
+
+    .gameInfo h1{
+        font-size: 1.5rem ;
+    }
+
+    .container{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
